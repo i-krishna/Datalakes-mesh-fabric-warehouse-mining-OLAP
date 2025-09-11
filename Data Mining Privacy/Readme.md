@@ -17,9 +17,6 @@ ASIS International. (2008). Can data mining and privacy coexist? Security Manage
 
 Newton, E. (2023). Top 5 challenges in ethical data mining we need to overcome. Datafloq. https://datafloq.com/read/top-5-challenges-ethical-data-mining-need-overcome/ 
 
-<img width="468" height="566" alt="image" src="https://github.com/user-attachments/assets/e671a048-68c3-4730-9b8c-2f6bec9db98a" />
-
-
 # Ethics & Bias across 6 phases of CRISP-DM 2.0
 Sept 7, 2025 by Krishna Damarla
 
