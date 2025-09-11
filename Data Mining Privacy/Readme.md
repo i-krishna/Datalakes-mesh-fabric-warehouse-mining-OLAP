@@ -1,3 +1,25 @@
+# A Simple Take on Cybersecurity
+by Krishna Damarla, 10-Sept-2025 
+
+Cyber threats keep rising every year. So, organizations need more than one wall of defense. They need layers, like a castle with gates, guards, and secret tunnels.
+
+I saw this play out in one of my federal banking projects. We started simple. Employees had to tap their ID cards just to unlock their laptops. Only then could they reach sensitive databases. On top of that, we built in end-to-end encryption and regular penetration tests. The project also enforced multi-factor authentication (MFA), regular rotation of keys and passwords, and a Zero Trust approach, meaning every request to touch sensitive data had to prove itself again and again to protect data privacy (ASIS International, 2008). 
+
+We did not stop there. Firewalls, intrusion detection systems, and frequent audits became part of the routine. These steps were not just technical boxes to check. They are grounded on the principle of “do no harm, act with integrity”. Also, they lined up with EU's GDPR and U.S California Consumer Privacy Act data protection laws demanding strong safeguards to protect consumer data. 
+
+The Principle of Least Privilege (PoLP) of “Give people only what they need to do their job” is strictly followed in the project, giving users access to exactly what they need and nothing more. I remember a junior analyst on that project. Even after passing the smart card check, he could only open the specific datasets tied to his task. Not the whole customer database. That one simple guardrail shrank the attack surface. It also kept personal data safe from misuse (IEEE, n.d.).
+
+PoLP is more than policy. It is respect in action, respect for privacy, and respect for autonomy. It also shows regulators that the company takes due diligence seriously. That means stronger compliance plus fewer risks of heavy penalties. Security can feel like a maze of tech buzzwords. But when you break it down, it is just about trust. Protecting people’s data, the way you would protect your own.
+
+**References**
+
+ASIS International. (2008). Can data mining and privacy coexist? Security Management. https://www.asisonline.org/security-management-magazine/articles/2008/11/can-data-mining-and-privacy-coexist/
+
+Newton, E. (2023). Top 5 challenges in ethical data mining we need to overcome. Datafloq. https://datafloq.com/read/top-5-challenges-ethical-data-mining-need-overcome/ 
+
+<img width="468" height="566" alt="image" src="https://github.com/user-attachments/assets/e671a048-68c3-4730-9b8c-2f6bec9db98a" />
+
+
 # Ethics & Bias across 6 phases of CRISP-DM 2.0
 Sept 7, 2025 by Krishna Damarla
 
