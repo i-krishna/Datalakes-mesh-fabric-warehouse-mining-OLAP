@@ -20,7 +20,7 @@ Newton, E. (2023). Top 5 challenges in ethical data mining we need to overcome. 
 # Ethics & Bias across 6 phases of CRISP-DM 2.0
 Sept 7, 2025 by Krishna Damarla
 
-Build your AI Agent or LLM by integrating self explanatory frameworks like IBM’s AI Explainability 360 [AIX360](https://github.com/Trusted-AI/AIX360) or others from this [list](https://securing.ai/ai-security/explainable-ai-frameworks/) of Securing AI. 
+Build your AI Agent or LLM by integrating explainable AI (XAI) frameworks like IBM’s AI Explainability 360 [AIX360](https://github.com/Trusted-AI/AIX360) or others from this [list](https://securing.ai/ai-security/explainable-ai-frameworks/) of Securing AI. 
 
 Adding explainable AI frameworks helps everyone see how models work. For example, explainable AI framework could explain why the model flagged a loan application. Such a reasoning built trusts and confidenceo and also meets legal requirements such as GDPR. Moreover, it becomes easier for users to ask questions and get trustable answers.
 
