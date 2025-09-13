@@ -3,7 +3,9 @@ Sept 7, 2025 by Krishna Damarla
 
 Build your AI Agent or LLM by integrating explainable AI (XAI) frameworks like IBM’s AI Explainability 360 [AIX360](https://github.com/Trusted-AI/AIX360) or others from this [list](https://securing.ai/ai-security/explainable-ai-frameworks/) of Securing AI. 
 
-Adding explainable AI frameworks helps everyone see how models work. For example, explainable AI framework could explain why the model flagged a [loan application](https://github.com/Trusted-AI/AIX360/blob/master/examples/tutorials/HELOC.ipynb). Such a reasoning built trusts, confidence in decisions and also meets legal requirements such as GDPR. It becomes easier for users to ask questions and get trustable answers.
+Adding explainable AI frameworks helps everyone see how models work. For example, explainable AI framework could explain why the model flagged a [loan application](https://github.com/Trusted-AI/AIX360/blob/master/examples/tutorials/HELOC.ipynb). Such a reasoning built trusts, confidence in decisions and also meets legal requirements such as GDPR. 
+
+Such an XAI integration into models makes the model trusthworthy for users to ask questions and get trusted answers.
 
 [Link to Report](https://github.com/i-krishna/Datawarehouse-Datamining-OLAP/blob/master/Data%20Mining%20Privacy/CRISP-DM%20and%20Laws%20of%20Data%20Mining%20Review.pdf )
 
