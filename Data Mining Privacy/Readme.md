@@ -4,7 +4,7 @@
 
 - [Multi split code](https://github.com/i-krishna/Business-Analytics/blob/main/Data-Science/Python/train_llm.py) - train, validate after each layer / epoch, test
 
-https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall#:~:text=The%20F1%20score%20is%20the,accuracy%20for%20class%2Dimbalanced%20datasets. 
+https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall
 
 # Ethics & Bias across 6 phases of CRISP-DM 2.0
 Sept 7, 2025 by Krishna Damarla
