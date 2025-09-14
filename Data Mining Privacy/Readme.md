@@ -126,7 +126,7 @@ Boujemaa, N. (2018). Transparency and accountability of algorithmic systems vs. 
 
 Da Bormida, M. (2021). The big data world: Benefits, threats and ethical challenges. In R. Iphofen & D. O'Mathúna (Eds.), Ethical issues in covert, security and surveillance research (Vol. 8, Chapter 6). Emerald Publishing Limited. https://doi.org/10.1108/S2398-601820210000008007
 
-Delen, D. (2020). Predictive analytics: Data mining, machine learning, and data science for practitioners (2nd ed.). Pearson.
+Delen, D. (2020). Predictive analytics: Data mining, machine learning, and data science for practitioners (2nd ed.). Pearson. https://www.pearson.com/en-us/subject-catalog/p/predictive-analytics-data-mining-machine-learning-and-data-science-for-practitioners/P200000000213/9780136738510?srsltid=AfmBOooR1m01i3OkvUiT-pBn5a14FU1Ca0A-RiMZ8QfGmiN4JrBwzlZI
 
 Dow, E. M. (n.d.). A hardware & software overview. IBM. [https://research.ibm.com/publications?source=19579 ](https://share.confex.com/share/117/webprogram/Handout/Session9577/WatsonHardwareAndSoftware.pdf) & https://research.ibm.com/publications/building-watson-an-overview-of-the-deepqa-project 
 
