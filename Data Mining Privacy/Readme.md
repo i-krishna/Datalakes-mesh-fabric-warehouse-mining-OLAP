@@ -5,6 +5,17 @@
 - [Multi split code](https://github.com/i-krishna/Business-Analytics/blob/main/Data-Science/Python/train_llm.py) - train, validate after each layer / epoch, test
 
 https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall
+```
+Precision = TP / (TP + FP)
+Recall = TP / (TP + FN)
+Accuracy = (TP + TN) / (TP + TN + FP + FN)
+
+Where,
+TP - True +ve
+FP - False +ve
+FP - False +ve
+FN - False -ve
+```
 
 # Ethics & Bias across 6 phases of CRISP-DM 2.0
 Sept 7, 2025 by Krishna Damarla
