@@ -1,7 +1,8 @@
 # Applying CRISP-DM 2.0 and Explainable AI
 Sept 7, 2025 by Krishna Damarla
 
-Detecting Fraud in Financial Transactions project is a [practical case study](https://github.com/i-krishna/Datawarehouse-Datamining-OLAP/blob/master/Data%20Mining%20Privacy/Detecting%20Fraud%20in%20Financial%20Transactions.pdf) for applying data mining across all six phases of CRISP-DM 2.0 along with [Ethics & Bias](https://github.com/i-krishna/Datawarehouse-Datamining-OLAP/blob/master/Data%20Mining%20Privacy/CRISP-DM%20and%20Laws%20of%20Data%20Mining%20Review.pdf) incorporation into the model. 
+Detecting Fraud in Financial Transactions project is a [practical case study](https://github.com/i-krishna/Datawarehouse-Datamining-OLAP/blob/master/Data%20Mining%20Privacy/Detecting%20Fraud%20in%20Financial%20Transactions.pdf) for applying data mining across all six phases of CRISP-DM 2.0 along with [ethics incorporation & handling bias
+](https://github.com/i-krishna/Datawarehouse-Datamining-OLAP/blob/master/Data%20Mining%20Privacy/CRISP-DM%20and%20Laws%20of%20Data%20Mining%20Review.pdf)
 
 [Balancing skewed data](https://github.com/i-krishna/Business-Analytics/blob/main/Data-Science/Python/balance-skewed-data.py) is a critical step in machine learning to prevent models from becoming biased toward the majority class. For classification tasks, this is called handling class imbalance. For regression, it addresses uneven distributions in the target variable. 
 
