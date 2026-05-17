@@ -17,6 +17,7 @@ CPU cores
 Spark jobs spend most of their time waiting for data to arrive from S3 over the network. The CPU cores are fast enough — they're just starved of data. This is why Spark parallelism (adding more machines) helps so much — you're adding more network connections to S3, not faster CPUs.
 
 ## CPU tenant isolation 
+```
 ┌─────────────────────────────────────────────────┐
 │ LEVEL 4: Kubernetes (orchestration)             │
 │ ResourceQuota, LimitRange, Namespaces           │
@@ -38,4 +39,5 @@ Spark jobs spend most of their time waiting for data to arrive from S3 over the 
 │ Cores, RAM, L3 cache — NO hardware partitioning │
 │ "Everything shares the same silicon"            │
 └─────────────────────────────────────────────────┘
+```
 The critical insight: every layer above Level 0 is software. The hardware itself is fully shared. This is the fundamental difference from GPU MIG.
