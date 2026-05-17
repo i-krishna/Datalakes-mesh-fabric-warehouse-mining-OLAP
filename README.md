@@ -63,6 +63,11 @@ ALTER TABLE ... CLUSTER BY (region, category)
 → "liquid" because it adapts as data and queries evolve
 ```
 
+ALTER TABLE gold.shipments
+CLUSTER BY (shipping_region, carrier_tier, shipment_date);
+
+OPTIMIZE gold.shipments;
+
 # Data compute
 
 For data compute (Spark), the bottleneck isn't RAM — it's the network and disk:
