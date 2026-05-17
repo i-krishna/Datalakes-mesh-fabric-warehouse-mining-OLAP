@@ -1,6 +1,9 @@
 # Lakehouse architecture 
 <img width="562" height="450" alt="image" src="https://github.com/user-attachments/assets/b8c9586d-9f29-4e30-842a-94fad0748ad7" />
 
+<img width="405" height="448" alt="image" src="https://github.com/user-attachments/assets/46d37cf0-d547-4004-9916-979509bb82d0" />
+
+
 # Data compute
 
 For data compute (Spark), the bottleneck isn't RAM — it's the network and disk:
