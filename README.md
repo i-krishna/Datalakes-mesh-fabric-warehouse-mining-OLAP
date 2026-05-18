@@ -9,7 +9,7 @@ Most data architecture diagrams start at the lakehouse. But data starts in appli
 
 Each microservice owns its own database schema, defined in C# and evolved via EF Core migrations — not hand-written DDL, not shared schema files. This is the application-side equivalent of Iceberg's schema evolution: where domain model changes are tracked, reversible, and tested before they ever touch production.
 
-The pattern has three layers working together: see [aspnetcore-efcore-db-webapi](https://github.com/i-krishna/aspnetcore-efcore-db-webapi 
+The pattern has three layers working together: see project implementation [aspnetcore-efcore-db-webapi](https://github.com/i-krishna/aspnetcore-efcore-db-webapi )
 
 **Layer 1** — Code-first schema management (application side). When a software engineer adds a field in AddCustomerField migration, that change is visible in Git history — not discovered at 2 AM when the Spark ETL breaks. The EF Core __EFMigrationsHistory table becomes an audit trail that data engineers can use to version-gate their pipelines. 
 
@@ -22,6 +22,9 @@ Loose coupling between app and platform: The RESTful API layer acts as the contr
 **Layer 3** — Event-driven ingestion into the lakehouse. The microservices' transactional databases (SQL Server) become the bronze source. Change Data Capture (CDC) — via Debezium, Azure Event Hubs, or similar — captures row-level mutations and streams them to the lakehouse bronze layer. From there, Spark/Databricks pipelines clean into silver and aggregate into gold. The __EFMigrationsHistory table provides the data engineering team a reliable audit trail: when a new column appears in a migration commit, they know exactly when to update their bronze-to-silver transformation pipeline
 
 CI/CD readiness: EF Core migrations are designed to run in a CI/CD pipeline (dotnet ef database update). This means schema changes go through the same pull request → review → deploy lifecycle as application code (Azure DevOps) — giving data teams predictable, tested schema evolution rather than surprise ALTER TABLE statements in production.
+
+<img width="632" height="346" alt="image" src="https://github.com/user-attachments/assets/43e47374-026b-4dce-85c6-f44759c54d58" />
+
 
 # How Iceberg REST Catalog Replaces Fragmented Metastores (One Table, Three Engines)
 
