@@ -9,7 +9,19 @@ Most data architecture diagrams start at the lakehouse. But data starts in appli
 
 Each microservice owns its own database schema, defined in C# and evolved via EF Core migrations — not hand-written DDL, not shared schema files. This is the application-side equivalent of Iceberg's schema evolution: where domain model changes are tracked, reversible, and tested before they ever touch production.
 
-[Project Implementation Reference](https://github.com/i-krishna/aspnetcore-efcore-db-webapi)
+The pattern has three layers working together: see [aspnetcore-efcore-db-webapi](https://github.com/i-krishna/aspnetcore-efcore-db-webapi 
+
+**Layer 1** — Code-first schema management (application side). When a software engineer adds a field in AddCustomerField migration, that change is visible in Git history — not discovered at 2 AM when the Spark ETL breaks. The EF Core __EFMigrationsHistory table becomes an audit trail that data engineers can use to version-gate their pipelines. 
+
+The C# domain model is the source of truth for schema. Product.cs defines a class; EF Core generates a Migration file (Up() / Down()) that maps to DDL. The __EFMigrationsHistory table tracks applied migrations. This makes schema changes reviewable in Git, testable in CI, and reversible — the same guarantees you get from Iceberg's snapshot-based schema evolution, but at the application layer.
+
+**Layer 2** — Loose coupling via service boundaries. Each microservice owns exactly one database. No service reads another's SQL tables directly. Communication happens via RESTful APIs (synchronous queries) or domain events / CDC (async data propagation). Engineering teams can deploy independently, roll back independently, and evolve their schemas without co-ordinating with the data platform team.
+
+Loose coupling between app and platform: The RESTful API layer acts as the contract boundary. The data platform consumes events or snapshots from these APIs — it never directly couples to the application's SQL Server schema. This mirrors the same principle as the Iceberg REST Catalog in the next section below: engines talk to a catalog endpoint, not directly to storage.
+
+**Layer 3** — Event-driven ingestion into the lakehouse. The microservices' transactional databases (SQL Server) become the bronze source. Change Data Capture (CDC) — via Debezium, Azure Event Hubs, or similar — captures row-level mutations and streams them to the lakehouse bronze layer. From there, Spark/Databricks pipelines clean into silver and aggregate into gold. The __EFMigrationsHistory table provides the data engineering team a reliable audit trail: when a new column appears in a migration commit, they know exactly when to update their bronze-to-silver transformation pipeline
+
+CI/CD readiness: EF Core migrations are designed to run in a CI/CD pipeline (dotnet ef database update). This means schema changes go through the same pull request → review → deploy lifecycle as application code (Azure DevOps) — giving data teams predictable, tested schema evolution rather than surprise ALTER TABLE statements in production.
 
 # How Iceberg REST Catalog Replaces Fragmented Metastores (One Table, Three Engines)
 
@@ -82,7 +94,7 @@ OPTIMIZE gold.shipments;
 
 # Data compute vs AI Compute
 
-See https://github.com/i-krishna/Business-Analytics/blob/main/Data-Science/Python/matrix_multiply_inverse.py#L2 for when to use Data compute vs AI Compute 
+See [here](https://github.com/i-krishna/Business-Analytics/blob/main/Data-Science/Python/matrix_multiply_inverse.py#L2) for when to use Data compute vs AI Compute 
 
 For data compute (Spark), the bottleneck isn't RAM — it's the network and disk:
 
