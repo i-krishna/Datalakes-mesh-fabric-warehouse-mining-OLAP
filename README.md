@@ -1,6 +1,16 @@
 # Lakehouse architecture 
 <img width="562" height="450" alt="image" src="https://github.com/user-attachments/assets/b8c9586d-9f29-4e30-842a-94fad0748ad7" />
 
+#  From Application to Lakehouse: Code-First Microservices as the Data Ingestion Layer
+
+<img width="471" height="324" alt="image" src="https://github.com/user-attachments/assets/c0cf77a7-71ea-4eed-b0d0-dc4ef4b1f0e2" />
+
+Most data architecture diagrams start at the lakehouse. But data starts in applications. This section bridges the two — showing how a code-first microservices backend (ASP.NET Core + EF Core) produces structured, version-controlled data that flows cleanly into a lakehouse architecture.
+
+Each microservice owns its own database schema, defined in C# and evolved via EF Core migrations — not hand-written DDL, not shared schema files. This is the application-side equivalent of Iceberg's schema evolution: where domain model changes are tracked, reversible, and tested before they ever touch production.
+
+[Project Implementation Reference](https://github.com/i-krishna/aspnetcore-efcore-db-webapi)
+
 <img width="405" height="448" alt="image" src="https://github.com/user-attachments/assets/46d37cf0-d547-4004-9916-979509bb82d0" />
 
 Example: A retailer like Target has three teams all working with the same silver.payments table:
