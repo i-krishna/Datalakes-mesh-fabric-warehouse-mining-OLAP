@@ -40,6 +40,7 @@ There is no formal agreement between the two teams about what the schema looks l
 **Act 1** — The Migration That Broke Everything
 On Tuesday morning, A developer on LoanOriginationTeam gets a ticket: "Regulatory requirement — the CFPB now requires us to store APR separately from interest rate."
 They open their StudentLoan.cs model and add a field:
+```
 csharppublic class StudentLoan
 {
     public int Id { get; set; }
@@ -48,6 +49,7 @@ csharppublic class StudentLoan
     public decimal InterestRate { get; set; }           // old field — still here
     public decimal AnnualPercentageRate { get; set; }   // new field — APR per CFPB
 }
+```
 They run the EF migration command:
 ```
 bash
